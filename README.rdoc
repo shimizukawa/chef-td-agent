@@ -33,11 +33,13 @@ A list of fluentd plugins to install. The +fluent-plugin-+ prefix is automatical
 
 - node[:td_agent][:plugins]
 
-== conf_cookbook
+== conf_cookbook and conf_template
 
-Cookbook name to retrieve td-agent.conf.erb template file for deploying custom td-agent.conf.
+conf_cookbook is cookbook name to retrieve template file for deploying custom td-agent.conf.
+conf_template is template file name.
 
-- node[:td_agent][:conf_cookbook]
+- node[:td_agent][:conf_cookbook] : default is 'td-agent'
+- node[:td_agent][:conf_template] : default is 'td-agent.conf.erb'
 
 === Example
 

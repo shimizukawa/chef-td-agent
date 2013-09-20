@@ -48,10 +48,8 @@ end
 
 template "/etc/td-agent/td-agent.conf" do
   mode "0644"
-  source "td-agent.conf.erb"
-  if node[:td_agent][:conf_cookbook]
-    cookbook node[:td_agent][:conf_cookbook]
-  end
+  source node[:td_agent][:conf_template]
+  cookbook node[:td_agent][:conf_cookbook]
 end
 
 package "td-agent" do
