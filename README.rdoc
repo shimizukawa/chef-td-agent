@@ -33,6 +33,12 @@ A list of fluentd plugins to install. The +fluent-plugin-+ prefix is automatical
 
 - node[:td_agent][:plugins]
 
+== conf_cookbook
+
+Cookbook name to retrieve td-agent.conf.erb template file for deploying custom td-agent.conf.
+
+- node[:td_agent][:conf_cookbook]
+
 === Example
 
 This installs the latest version of +fluent-plugin-flowcounter+ and version 0.0.9 of +fluent-plugin-rewrite+.

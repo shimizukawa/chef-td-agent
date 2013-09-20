@@ -49,6 +49,9 @@ end
 template "/etc/td-agent/td-agent.conf" do
   mode "0644"
   source "td-agent.conf.erb"
+  if node[:td_agent][:conf_cookbook]
+    cookbook node[:td_agent][:conf_cookbook]
+  end
 end
 
 package "td-agent" do
